@@ -1,0 +1,235 @@
+/* estilo limpo, responsivo e acessível para o quiz */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+    --bg: #f3f6fb;
+    --card: #ffffff;
+    --muted: #6b7280;
+    --primary: #2563eb;      /* azul */
+    --primary-dark: #1e40af;
+    --accent: #10b981;       /* verde */
+    --danger: #ef4444;
+    --glass: rgba(255,255,255,0.65);
+    --radius: 12px;
+    --shadow: 0 6px 20px rgba(16,24,40,0.08);
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+    margin:0;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 100%);
+    color:#0f172a;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    padding:36px 16px;
+}
+
+/* container central */
+.container{
+    max-width:900px;
+    margin:0 auto;
+    background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.9));
+    border-radius: calc(var(--radius) + 4px);
+    padding:28px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(6px);
+}
+
+/* header */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:16px;
+    margin-bottom:18px;
+}
+.header h1{
+    margin:0;
+    font-size:28px;
+    line-height:1;
+    font-weight:700;
+    color:#0b1220;
+}
+.controls{
+    display:flex;
+    gap:8px;
+    align-items:center;
+}
+
+.controls button{
+    padding:8px 12px;
+    border-radius:10px;
+    border:1px solid rgba(15,23,42,0.06);
+    background:transparent;
+    cursor:pointer;
+    font-weight:600;
+    font-size:14px;
+}
+.controls button:hover{ transform:translateY(-1px) }
+
+.play, .result, .empty{
+    background:var(--card);
+    border-radius:10px;
+    padding:22px;
+    box-shadow: 0 4px 16px rgba(15,23,42,0.04);
+}
+
+/* pergunta no topo */
+.q-count{
+    font-size:14px;
+    color:var(--muted);
+    margin-bottom:8px;
+}
+.q-text-large{
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:18px;
+    color:#0b1220;
+    min-height:56px;
+    display:flex;
+    align-items:center;
+}
+
+/* área de escolhas: botões grandes */
+.choices{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:12px;
+    margin-top:6px;
+}
+@media(min-width:640px){
+    .choices{ grid-template-columns: 1fr 1fr; }
+}
+
+.choices button{
+    background: #ffffff;
+    border: 2px solid rgba(15,23,42,0.06);
+    padding:14px 16px;
+    border-radius:12px;
+    font-size:16px;
+    text-align:left;
+    cursor:pointer;
+    box-shadow: 0 6px 14px rgba(16,24,40,0.04);
+    transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease, background .12s ease;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    user-select:none;
+}
+.choices button:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(16,24,40,0.08);
+    border-color: rgba(37,99,235,0.18);
+}
+.choices button:focus{
+    outline: 3px solid rgba(37,99,235,0.15);
+    outline-offset:2px;
+}
+
+/* destaque visual do botão correto/errado */
+/* botão correto */
+.choice-correct {
+    background: #10b981 !important;   /* verde forte */
+    border-color: #059669 !important;
+    color: white !important;
+    transform: scale(1.03);
+    transition: 0.2s ease;
+    box-shadow: 0 0 12px rgba(16,185,129,0.4);
+}
+
+/* botão errado */
+.choice-wrong {
+    background: #ef4444 !important;   /* vermelho forte */
+    border-color: #dc2626 !important;
+    color: white !important;
+    transform: scale(1.03);
+    transition: 0.2s ease;
+    box-shadow: 0 0 12px rgba(239,68,68,0.4);
+}
+
+/* botões desativados ficam opacos */
+.choices button:disabled {
+    opacity: 0.7;
+}
+
+/* status e pontuação */
+.status, .footer{
+    color:var(--muted);
+    margin-top:12px;
+    font-size:14px;
+}
+
+.admin-grid{
+    display:grid;
+    grid-template-columns: 1fr 360px;
+    gap:16px;
+}
+@media(max-width:900px){ .admin-grid{ grid-template-columns: 1fr; } }
+
+.card{
+    padding:14px;
+    border-radius:10px;
+    background:linear-gradient(180deg, #fff, #fbfdff);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    border:1px solid rgba(15,23,42,0.04);
+    margin-bottom:10px;
+}
+.card .q-text{ font-weight:600; color:#0b1220; }
+.card .q-sub{ font-size:13px; color:var(--muted); margin-top:6px; }
+.card-actions button{
+    margin-left:8px;
+    padding:8px 10px;
+    border-radius:8px;
+    border:1px solid rgba(15,23,42,0.06);
+    background:transparent;
+    cursor:pointer;
+}
+.card-actions button:last-child{ color:var(--danger); border-color: rgba(239,68,68,0.08); }
+
+.editor{ padding:14px; border-radius:10px; background:var(--card); border:1px solid rgba(15,23,42,0.04) }
+.editor input{
+    width:100%;
+    padding:10px 12px;
+    border-radius:10px;
+    border:1px solid rgba(15,23,42,0.06);
+    margin-bottom:10px;
+    font-size:14px;
+}
+.editor-actions{ display:flex; gap:8px; margin-top:8px; }
+.editor-actions button{
+    padding:10px 14px;
+    border-radius:10px;
+    border: none;
+    cursor:pointer;
+    font-weight:600;
+}
+.editor-actions button:first-child{
+    background:var(--primary);
+    color:white;
+}
+.editor-actions button:last-child{
+    background:transparent;
+    border:1px solid rgba(15,23,42,0.06);
+}
+
+.result .title{ font-size:20px; font-weight:700; margin-bottom:6px; }
+.result .score{ font-size:16px; color:#0b1220; margin-bottom:12px; }
+
+.small-muted{ color:var(--muted); font-size:13px }
+
+/* melhora botões do header quando for admin */
+.controls .primary{
+    background:var(--primary);
+    color:white;
+    border:none;
+    padding:9px 12px;
+    border-radius:10px;
+}
+
+

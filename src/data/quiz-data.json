@@ -1,0 +1,62 @@
+[
+  {
+    "id": "q1",
+    "question": "Qual é a capital do Brasil?",
+    "correctAnswer": "Brasília",
+    "wrongAnswers": ["São Paulo", "Rio de Janeiro", "Salvador"]
+  },
+  {
+    "id": "q2",
+    "question": "Quanto é 2 + 3?",
+    "correctAnswer": "5",
+    "wrongAnswers": ["4", "6", "7"]
+  },
+  {
+    "id": "q3",
+    "question": "Qual é o maior planeta do Sistema Solar?",
+    "correctAnswer": "Júpiter",
+    "wrongAnswers": ["Terra", "Marte", "Vênus"]
+  },
+  {
+    "id": "q4",
+    "question": "Qual animal é conhecido como o rei da selva?",
+    "correctAnswer": "Leão",
+    "wrongAnswers": ["Tigre", "Elefante", "Guepardo"]
+  },
+  {
+    "id": "q5",
+    "question": "Qual é o nome do continente onde vivemos?",
+    "correctAnswer": "América do Sul",
+    "wrongAnswers": ["Europa", "África", "Ásia"]
+  },
+  {
+    "id": "q6",
+    "question": "Qual é a cor do céu em um dia ensolarado?",
+    "correctAnswer": "Azul",
+    "wrongAnswers": ["Verde", "Amarelo", "Cinza"]
+  },
+  {
+    "id": "q7",
+    "question": "Qual é o nome do satélite natural da Terra?",
+    "correctAnswer": "Lua",
+    "wrongAnswers": ["Sol", "Marte", "Júpiter"]
+  },
+  {
+    "id": "q8",
+    "question": "Quantos dias tem uma semana?",
+    "correctAnswer": "7",
+    "wrongAnswers": ["5", "6", "8"]
+  },
+  {
+    "id": "q9",
+    "question": "Qual instrumento é usado para escrever?",
+    "correctAnswer": "Lápis",
+    "wrongAnswers": ["Tesoura", "Régua", "Cola"]
+  },
+  {
+    "id": "q10",
+    "question": "Que fruta é amarela e curva?",
+    "correctAnswer": "Banana",
+    "wrongAnswers": ["Maçã", "Abacaxi", "Melancia"]
+  }
+]
