@@ -11,8 +11,8 @@ Projeto de extensão em React para estudos, com perguntas carregadas via JSON e 
 
 ## Como rodar
 
-npm install
-npm start
+- npm install
+- npm start
 
 ## Tecnologias
 
