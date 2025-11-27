@@ -290,10 +290,15 @@ function QuizPlayer({ questions }) {
                     let className = "";
 
                     if (selected) {
-                        if (choice === q.correctAnswer && choice === selected) {
-                            className = "choice-correct";
-                        } else if (choice === selected && choice !== q.correctAnswer) {
-                            className = "choice-wrong";
+                        const isCorrect = choice === q.correctAnswer;
+                        const isSelected = choice === selected;
+
+                        if (isCorrect) {
+                            className = "choice-correct";  // mostra verde sempre na correta
+                        }
+
+                        if (isSelected && !isCorrect) {
+                            className = "choice-wrong";    // mostra vermelho na errada clicada
                         }
                     }
 
@@ -312,6 +317,7 @@ function QuizPlayer({ questions }) {
                         </button>
                     );
                 })}
+
             </div>
 
             <div className="status">Pontuação atual: {score}</div>
