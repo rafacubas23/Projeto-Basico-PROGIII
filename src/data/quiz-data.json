@@ -1,62 +1,152 @@
 [
   {
-    "id": "q1",
-    "question": "Qual é a capital do Brasil?",
-    "correctAnswer": "Brasília",
-    "wrongAnswers": ["São Paulo", "Rio de Janeiro", "Salvador"]
+    "id": "f_easy_1",
+    "question": "Quem é considerado o pai da filosofia ocidental?",
+    "choices": [
+      { "text": "Sócrates", "icon": "🗣️", "isCorrect": true },
+      { "text": "Platão", "icon": "🏛️", "isCorrect": false },
+      { "text": "Aristóteles", "icon": "📚", "isCorrect": false },
+      { "text": "Parmênides", "icon": "🔎", "isCorrect": false }
+    ]
   },
   {
-    "id": "q2",
-    "question": "Quanto é 2 + 3?",
-    "correctAnswer": "5",
-    "wrongAnswers": ["4", "6", "7"]
+    "id": "f_easy_2",
+    "question": "Qual filósofo é famoso por ensinar através de perguntas (método socrático)?",
+    "choices": [
+      { "text": "Sócrates", "icon": "❓", "isCorrect": true },
+      { "text": "Pitágoras", "icon": "🔺", "isCorrect": false },
+      { "text": "Descartes", "icon": "🤔", "isCorrect": false },
+      { "text": "Epicuro", "icon": "🍇", "isCorrect": false }
+    ]
   },
   {
-    "id": "q3",
-    "question": "Qual é o maior planeta do Sistema Solar?",
-    "correctAnswer": "Júpiter",
-    "wrongAnswers": ["Terra", "Marte", "Vênus"]
+    "id": "f_easy_3",
+    "question": "Qual é o nome do filósofo que escreveu 'A República'?",
+    "choices": [
+      { "text": "Platão", "icon": "📜", "isCorrect": true },
+      { "text": "Aristóteles", "icon": "🏺", "isCorrect": false },
+      { "text": "Hobbes", "icon": "⚔️", "isCorrect": false },
+      { "text": "Kant", "icon": "🧭", "isCorrect": false }
+    ]
   },
   {
-    "id": "q4",
-    "question": "Qual animal é conhecido como o rei da selva?",
-    "correctAnswer": "Leão",
-    "wrongAnswers": ["Tigre", "Elefante", "Guepardo"]
+    "id": "f_easy_4",
+    "question": "Qual corrente filosófica prioriza o uso da razão como fonte principal do conhecimento?",
+    "choices": [
+      { "text": "Racionalismo", "icon": "🧠", "isCorrect": true },
+      { "text": "Empirismo", "icon": "🔬", "isCorrect": false },
+      { "text": "Ceticismo", "icon": "⚖️", "isCorrect": false },
+      { "text": "Existencialismo", "icon": "🛤️", "isCorrect": false }
+    ]
   },
   {
-    "id": "q5",
-    "question": "Qual é o nome do continente onde vivemos?",
-    "correctAnswer": "América do Sul",
-    "wrongAnswers": ["Europa", "África", "Ásia"]
+    "id": "f_easy_5",
+    "question": "Quem é autor da frase 'Penso, logo existo'?",
+    "choices": [
+      { "text": "René Descartes", "icon": "🧾", "isCorrect": true },
+      { "text": "Kant", "icon": "🔔", "isCorrect": false },
+      { "text": "Hume", "icon": "🌊", "isCorrect": false },
+      { "text": "Spinoza", "icon": "🌿", "isCorrect": false }
+    ]
   },
   {
-    "id": "q6",
-    "question": "Qual é a cor do céu em um dia ensolarado?",
-    "correctAnswer": "Azul",
-    "wrongAnswers": ["Verde", "Amarelo", "Cinza"]
+    "id": "f_medium_1",
+    "question": "Para Aristóteles, qual é o objetivo final da vida humana?",
+    "choices": [
+      { "text": "A busca pela eudaimonia (felicidade/realização)", "icon": "🏆", "isCorrect": true },
+      { "text": "Dominar os desejos", "icon": "🔗", "isCorrect": false },
+      { "text": "Buscar os prazeres", "icon": "🍷", "isCorrect": false },
+      { "text": "Obedecer às leis da pólis", "icon": "🏛️", "isCorrect": false }
+    ]
   },
   {
-    "id": "q7",
-    "question": "Qual é o nome do satélite natural da Terra?",
-    "correctAnswer": "Lua",
-    "wrongAnswers": ["Sol", "Marte", "Júpiter"]
+    "id": "f_medium_2",
+    "question": "Qual filósofo defendia que o estado de natureza era uma guerra de todos contra todos?",
+    "choices": [
+      { "text": "Thomas Hobbes", "icon": "🛡️", "isCorrect": true },
+      { "text": "John Locke", "icon": "⚖️", "isCorrect": false },
+      { "text": "Rousseau", "icon": "🌱", "isCorrect": false },
+      { "text": "Montesquieu", "icon": "🏛️", "isCorrect": false }
+    ]
   },
   {
-    "id": "q8",
-    "question": "Quantos dias tem uma semana?",
-    "correctAnswer": "7",
-    "wrongAnswers": ["5", "6", "8"]
+    "id": "f_medium_3",
+    "question": "Qual filósofo é associado ao imperativo categórico?",
+    "choices": [
+      { "text": "Immanuel Kant", "icon": "🧭", "isCorrect": true },
+      { "text": "Hegel", "icon": "⚙️", "isCorrect": false },
+      { "text": "Schopenhauer", "icon": "🎭", "isCorrect": false },
+      { "text": "Nietzsche", "icon": "🔥", "isCorrect": false }
+    ]
   },
   {
-    "id": "q9",
-    "question": "Qual instrumento é usado para escrever?",
-    "correctAnswer": "Lápis",
-    "wrongAnswers": ["Tesoura", "Régua", "Cola"]
+    "id": "f_medium_4",
+    "question": "Quem afirmou que 'o homem está condenado a ser livre'?",
+    "choices": [
+      { "text": "Jean-Paul Sartre", "icon": "🕊️", "isCorrect": true },
+      { "text": "Albert Camus", "icon": "🏜️", "isCorrect": false },
+      { "text": "Martin Heidegger", "icon": "⏳", "isCorrect": false },
+      { "text": "Kierkegaard", "icon": "✝️", "isCorrect": false }
+    ]
   },
   {
-    "id": "q10",
-    "question": "Que fruta é amarela e curva?",
-    "correctAnswer": "Banana",
-    "wrongAnswers": ["Maçã", "Abacaxi", "Melancia"]
+    "id": "f_medium_5",
+    "question": "Para qual filósofo o conhecimento começa com a experiência, mas não deriva inteiramente dela (síntese entre razão e experiência)?",
+    "choices": [
+      { "text": "Immanuel Kant", "icon": "🔬", "isCorrect": true },
+      { "text": "John Locke", "icon": "📘", "isCorrect": false },
+      { "text": "George Berkeley", "icon": "🌐", "isCorrect": false },
+      { "text": "David Hume", "icon": "🌊", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "f_hard_1",
+    "question": "Qual filósofo afirmou que a realidade é composta por mônadas, entidades indivisíveis sem extensão?",
+    "choices": [
+      { "text": "Gottfried Wilhelm Leibniz", "icon": "⚛️", "isCorrect": true },
+      { "text": "René Descartes", "icon": "🧭", "isCorrect": false },
+      { "text": "Baruch Spinoza", "icon": "🌿", "isCorrect": false },
+      { "text": "Immanuel Kant", "icon": "📐", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "f_hard_2",
+    "question": "Na filosofia de Hegel, qual é o processo que descreve o desenvolvimento do espírito através de tese, antítese e síntese?",
+    "choices": [
+      { "text": "Dialética", "icon": "🔁", "isCorrect": true },
+      { "text": "Fenomenologia", "icon": "👁️", "isCorrect": false },
+      { "text": "Hermenêutica", "icon": "📖", "isCorrect": false },
+      { "text": "Metafísica", "icon": "🏛️", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "f_hard_3",
+    "question": "Quem escreveu 'Ser e Tempo', obra fundamental do existencialismo fenomenológico?",
+    "choices": [
+      { "text": "Martin Heidegger", "icon": "⏳", "isCorrect": true },
+      { "text": "Jean-Paul Sartre", "icon": "🕊️", "isCorrect": false },
+      { "text": "Edmund Husserl", "icon": "🔎", "isCorrect": false },
+      { "text": "Maurice Merleau-Ponty", "icon": "🧭", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "f_hard_4",
+    "question": "Qual filósofo defende que a vontade é a essência do mundo e que a vida é impulsionada por um desejo irracional?",
+    "choices": [
+      { "text": "Arthur Schopenhauer", "icon": "🖋️", "isCorrect": true },
+      { "text": "Friedrich Nietzsche", "icon": "🔥", "isCorrect": false },
+      { "text": "Immanuel Kant", "icon": "⚖️", "isCorrect": false },
+      { "text": "Georg Hegel", "icon": "🏛️", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "f_hard_5",
+    "question": "Na filosofia de Spinoza, qual é o nome dado ao único princípio que constitui todas as coisas, identificado como Deus ou Natureza?",
+    "choices": [
+      { "text": "Substância", "icon": "🌐", "isCorrect": true },
+      { "text": "Atributo", "icon": "🔧", "isCorrect": false },
+      { "text": "Modo", "icon": "⚙️", "isCorrect": false },
+      { "text": "Essência", "icon": "💠", "isCorrect": false }
+    ]
   }
 ]
