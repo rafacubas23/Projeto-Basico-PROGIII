@@ -1,152 +1,206 @@
 [
   {
-    "id": "f_easy_1",
-    "question": "Quem é considerado o pai da filosofia ocidental?",
+    "id": "q1",
+    "question": "Quanto é 7 × 8?",
     "choices": [
-      { "text": "Sócrates", "icon": "🗣️", "isCorrect": true },
-      { "text": "Platão", "icon": "🏛️", "isCorrect": false },
-      { "text": "Aristóteles", "icon": "📚", "isCorrect": false },
-      { "text": "Parmênides", "icon": "🔎", "isCorrect": false }
+      { "text": "56", "icon": "\uD83D\uDD22", "isCorrect": true },
+      { "text": "48", "icon": "🔢", "isCorrect": false },
+      { "text": "54", "icon": "🔢", "isCorrect": false },
+      { "text": "64", "icon": "🔢", "isCorrect": false }
     ]
   },
   {
-    "id": "f_easy_2",
-    "question": "Qual filósofo é famoso por ensinar através de perguntas (método socrático)?",
+    "id": "q2",
+    "question": "Qual é a capital do Brasil?",
     "choices": [
-      { "text": "Sócrates", "icon": "❓", "isCorrect": true },
-      { "text": "Pitágoras", "icon": "🔺", "isCorrect": false },
-      { "text": "Descartes", "icon": "🤔", "isCorrect": false },
-      { "text": "Epicuro", "icon": "🍇", "isCorrect": false }
+      { "text": "Brasília", "icon": "🏛️", "isCorrect": true },
+      { "text": "Rio de Janeiro", "icon": "🏖️", "isCorrect": false },
+      { "text": "Salvador", "icon": "🎭", "isCorrect": false },
+      { "text": "São Paulo", "icon": "🌆", "isCorrect": false }
     ]
   },
   {
-    "id": "f_easy_3",
-    "question": "Qual é o nome do filósofo que escreveu 'A República'?",
+    "id": "q3",
+    "question": "Quantos lados tem um hexágono?",
     "choices": [
-      { "text": "Platão", "icon": "📜", "isCorrect": true },
-      { "text": "Aristóteles", "icon": "🏺", "isCorrect": false },
-      { "text": "Hobbes", "icon": "⚔️", "isCorrect": false },
-      { "text": "Kant", "icon": "🧭", "isCorrect": false }
+      { "text": "6", "icon": "⬡", "isCorrect": true },
+      { "text": "5", "icon": "🔷", "isCorrect": false },
+      { "text": "3", "icon": "🔺", "isCorrect": false },
+      { "text": "8", "icon": "🛑", "isCorrect": false }
+    ]
+  },
+
+  {
+    "id": "q4",
+    "question": "How do you say 'cachorro' in English?",
+    "choices": [
+      { "text": "Dog", "icon": "🐶", "isCorrect": true },
+      { "text": "Cat", "icon": "🐱", "isCorrect": false },
+      { "text": "Duck", "icon": "🦆", "isCorrect": false },
+      { "text": "Cow", "icon": "🐄", "isCorrect": false }
+    ]
+  },
+
+  {
+    "id": "q5",
+    "question": "Qual é o maior planeta do Sistema Solar?",
+    "choices": [
+      { "text": "Júpiter", "icon": "🪐", "isCorrect": true },
+      { "text": "Terra", "icon": "🌍", "isCorrect": false },
+      { "text": "Marte", "icon": "🔴", "isCorrect": false },
+      { "text": "Saturno", "icon": "💍", "isCorrect": false }
     ]
   },
   {
-    "id": "f_easy_4",
-    "question": "Qual corrente filosófica prioriza o uso da razão como fonte principal do conhecimento?",
+    "id": "q6",
+    "question": "Em que continente fica o Egito?",
     "choices": [
-      { "text": "Racionalismo", "icon": "🧠", "isCorrect": true },
-      { "text": "Empirismo", "icon": "🔬", "isCorrect": false },
-      { "text": "Ceticismo", "icon": "⚖️", "isCorrect": false },
-      { "text": "Existencialismo", "icon": "🛤️", "isCorrect": false }
+      { "text": "África", "icon": "🌍", "isCorrect": true },
+      { "text": "Ásia", "icon": "🕌", "isCorrect": false },
+      { "text": "Europa", "icon": "🏛️", "isCorrect": false },
+      { "text": "América", "icon": "🌎", "isCorrect": false }
+    ]
+  },
+
+  {
+    "id": "q7",
+    "question": "How do you say 'livro' in English?",
+    "choices": [
+      { "text": "Book", "icon": "📘", "isCorrect": true },
+      { "text": "Pen", "icon": "🖊️", "isCorrect": false },
+      { "text": "Paper", "icon": "📄", "isCorrect": false },
+      { "text": "Table", "icon": "🪑", "isCorrect": false }
+    ]
+  },
+
+  {
+    "id": "q8",
+    "question": "Qual é o valor do algarismo 3 no número 3.582?",
+    "choices": [
+      { "text": "3 mil", "icon": "📦", "isCorrect": true },
+      { "text": "3 centenas", "icon": "💯", "isCorrect": false },
+      { "text": "3 dezenas", "icon": "🔟", "isCorrect": false },
+      { "text": "3 unidades", "icon": "1️⃣", "isCorrect": false }
     ]
   },
   {
-    "id": "f_easy_5",
-    "question": "Quem é autor da frase 'Penso, logo existo'?",
+    "id": "q9",
+    "question": "Que figura geométrica tem todos os lados iguais?",
     "choices": [
-      { "text": "René Descartes", "icon": "🧾", "isCorrect": true },
-      { "text": "Kant", "icon": "🔔", "isCorrect": false },
-      { "text": "Hume", "icon": "🌊", "isCorrect": false },
-      { "text": "Spinoza", "icon": "🌿", "isCorrect": false }
+      { "text": "Quadrado", "icon": "⬛", "isCorrect": true },
+      { "text": "Retângulo", "icon": "⬜", "isCorrect": false },
+      { "text": "Triângulo", "icon": "🔺", "isCorrect": false },
+      { "text": "Trapézio", "icon": "🔶", "isCorrect": false }
     ]
   },
   {
-    "id": "f_medium_1",
-    "question": "Para Aristóteles, qual é o objetivo final da vida humana?",
+    "id": "q10",
+    "question": "O que é fotossíntese?",
     "choices": [
-      { "text": "A busca pela eudaimonia (felicidade/realização)", "icon": "🏆", "isCorrect": true },
-      { "text": "Dominar os desejos", "icon": "🔗", "isCorrect": false },
-      { "text": "Buscar os prazeres", "icon": "🍷", "isCorrect": false },
-      { "text": "Obedecer às leis da pólis", "icon": "🏛️", "isCorrect": false }
+      { "text": "Processo das plantas para produzir alimento", "icon": "🌿", "isCorrect": true },
+      { "text": "Tipo de semente", "icon": "🌱", "isCorrect": false },
+      { "text": "Partes de um fruto", "icon": "🍎", "isCorrect": false },
+      { "text": "Forma de reprodução dos animais", "icon": "🐾", "isCorrect": false }
     ]
   },
   {
-    "id": "f_medium_2",
-    "question": "Qual filósofo defendia que o estado de natureza era uma guerra de todos contra todos?",
+    "id": "q11",
+    "question": "Qual desses é um recurso natural renovável?",
     "choices": [
-      { "text": "Thomas Hobbes", "icon": "🛡️", "isCorrect": true },
-      { "text": "John Locke", "icon": "⚖️", "isCorrect": false },
-      { "text": "Rousseau", "icon": "🌱", "isCorrect": false },
-      { "text": "Montesquieu", "icon": "🏛️", "isCorrect": false }
+      { "text": "Água", "icon": "💧", "isCorrect": true },
+      { "text": "Petróleo", "icon": "🛢️", "isCorrect": false },
+      { "text": "Gás natural", "icon": "🔥", "isCorrect": false },
+      { "text": "Carvão mineral", "icon": "🪨", "isCorrect": false }
     ]
   },
   {
-    "id": "f_medium_3",
-    "question": "Qual filósofo é associado ao imperativo categórico?",
+    "id": "q12",
+    "question": "O que significa IBGE?",
     "choices": [
-      { "text": "Immanuel Kant", "icon": "🧭", "isCorrect": true },
-      { "text": "Hegel", "icon": "⚙️", "isCorrect": false },
-      { "text": "Schopenhauer", "icon": "🎭", "isCorrect": false },
-      { "text": "Nietzsche", "icon": "🔥", "isCorrect": false }
+      { "text": "Instituto Brasileiro de Geografia e Estatística", "icon": "📊", "isCorrect": true },
+      { "text": "Instituto de Biomas e Geologia Especial", "icon": "🪴", "isCorrect": false },
+      { "text": "Instituto Básico de Gestão Escolar", "icon": "📚", "isCorrect": false },
+      { "text": "Instituto Brasileiro de Geopolítica", "icon": "🌐", "isCorrect": false }
     ]
   },
   {
-    "id": "f_medium_4",
-    "question": "Quem afirmou que 'o homem está condenado a ser livre'?",
+    "id": "q13",
+    "question": "Qual é o maior oceano do planeta?",
     "choices": [
-      { "text": "Jean-Paul Sartre", "icon": "🕊️", "isCorrect": true },
-      { "text": "Albert Camus", "icon": "🏜️", "isCorrect": false },
-      { "text": "Martin Heidegger", "icon": "⏳", "isCorrect": false },
-      { "text": "Kierkegaard", "icon": "✝️", "isCorrect": false }
+      { "text": "Oceano Pacífico", "icon": "🌊", "isCorrect": true },
+      { "text": "Oceano Atlântico", "icon": "⚓", "isCorrect": false },
+      { "text": "Oceano Índico", "icon": "🏝️", "isCorrect": false },
+      { "text": "Oceano Ártico", "icon": "❄️", "isCorrect": false }
     ]
   },
   {
-    "id": "f_medium_5",
-    "question": "Para qual filósofo o conhecimento começa com a experiência, mas não deriva inteiramente dela (síntese entre razão e experiência)?",
+    "id": "q14",
+    "question": "Qual é o animal terrestre mais rápido?",
     "choices": [
-      { "text": "Immanuel Kant", "icon": "🔬", "isCorrect": true },
-      { "text": "John Locke", "icon": "📘", "isCorrect": false },
-      { "text": "George Berkeley", "icon": "🌐", "isCorrect": false },
-      { "text": "David Hume", "icon": "🌊", "isCorrect": false }
+      { "text": "Guepardo", "icon": "🐆", "isCorrect": true },
+      { "text": "Leão", "icon": "🦁", "isCorrect": false },
+      { "text": "Tigre", "icon": "🐯", "isCorrect": false },
+      { "text": "Cavalo", "icon": "🐎", "isCorrect": false }
     ]
   },
   {
-    "id": "f_hard_1",
-    "question": "Qual filósofo afirmou que a realidade é composta por mônadas, entidades indivisíveis sem extensão?",
+    "id": "q15",
+    "question": "O que mede a escala Richter?",
     "choices": [
-      { "text": "Gottfried Wilhelm Leibniz", "icon": "⚛️", "isCorrect": true },
-      { "text": "René Descartes", "icon": "🧭", "isCorrect": false },
-      { "text": "Baruch Spinoza", "icon": "🌿", "isCorrect": false },
-      { "text": "Immanuel Kant", "icon": "📐", "isCorrect": false }
+      { "text": "A força dos terremotos", "icon": "🌋", "isCorrect": true },
+      { "text": "Temperatura", "icon": "🌡️", "isCorrect": false },
+      { "text": "Velocidade do vento", "icon": "🌬️", "isCorrect": false },
+      { "text": "Quantidade de chuva", "icon": "🌧️", "isCorrect": false }
     ]
   },
   {
-    "id": "f_hard_2",
-    "question": "Na filosofia de Hegel, qual é o processo que descreve o desenvolvimento do espírito através de tese, antítese e síntese?",
+    "id": "q16",
+    "question": "Qual país é conhecido como 'Terra do Sol Nascente'?",
     "choices": [
-      { "text": "Dialética", "icon": "🔁", "isCorrect": true },
-      { "text": "Fenomenologia", "icon": "👁️", "isCorrect": false },
-      { "text": "Hermenêutica", "icon": "📖", "isCorrect": false },
-      { "text": "Metafísica", "icon": "🏛️", "isCorrect": false }
+      { "text": "Japão", "icon": "🇯🇵", "isCorrect": true },
+      { "text": "China", "icon": "🇨🇳", "isCorrect": false },
+      { "text": "Coreia do Sul", "icon": "🇰🇷", "isCorrect": false },
+      { "text": "Tailândia", "icon": "🇹🇭", "isCorrect": false }
     ]
   },
   {
-    "id": "f_hard_3",
-    "question": "Quem escreveu 'Ser e Tempo', obra fundamental do existencialismo fenomenológico?",
+    "id": "q17",
+    "question": "O que é uma nascente de rio?",
     "choices": [
-      { "text": "Martin Heidegger", "icon": "⏳", "isCorrect": true },
-      { "text": "Jean-Paul Sartre", "icon": "🕊️", "isCorrect": false },
-      { "text": "Edmund Husserl", "icon": "🔎", "isCorrect": false },
-      { "text": "Maurice Merleau-Ponty", "icon": "🧭", "isCorrect": false }
+      { "text": "O local onde o rio começa", "icon": "💧", "isCorrect": true },
+      { "text": "O local onde o rio acaba", "icon": "🌊", "isCorrect": false },
+      { "text": "A parte mais profunda do rio", "icon": "📏", "isCorrect": false },
+      { "text": "A parte mais larga do rio", "icon": "🏞️", "isCorrect": false }
     ]
   },
   {
-    "id": "f_hard_4",
-    "question": "Qual filósofo defende que a vontade é a essência do mundo e que a vida é impulsionada por um desejo irracional?",
+    "id": "q18",
+    "question": "Quem descobriu o Brasil em 1500?",
     "choices": [
-      { "text": "Arthur Schopenhauer", "icon": "🖋️", "isCorrect": true },
-      { "text": "Friedrich Nietzsche", "icon": "🔥", "isCorrect": false },
-      { "text": "Immanuel Kant", "icon": "⚖️", "isCorrect": false },
-      { "text": "Georg Hegel", "icon": "🏛️", "isCorrect": false }
+      { "text": "Pedro Álvares Cabral", "icon": "⛵", "isCorrect": true },
+      { "text": "Cristóvão Colombo", "icon": "🧭", "isCorrect": false },
+      { "text": "Vasco da Gama", "icon": "🗺️", "isCorrect": false },
+      { "text": "Fernão de Magalhães", "icon": "🌎", "isCorrect": false }
     ]
   },
   {
-    "id": "f_hard_5",
-    "question": "Na filosofia de Spinoza, qual é o nome dado ao único princípio que constitui todas as coisas, identificado como Deus ou Natureza?",
+    "id": "q19",
+    "question": "Qual é o planeta conhecido como 'Planeta Vermelho'?",
     "choices": [
-      { "text": "Substância", "icon": "🌐", "isCorrect": true },
-      { "text": "Atributo", "icon": "🔧", "isCorrect": false },
-      { "text": "Modo", "icon": "⚙️", "isCorrect": false },
-      { "text": "Essência", "icon": "💠", "isCorrect": false }
+      { "text": "Marte", "icon": "🔴", "isCorrect": true },
+      { "text": "Vênus", "icon": "🌕", "isCorrect": false },
+      { "text": "Júpiter", "icon": "🪐", "isCorrect": false },
+      { "text": "Saturno", "icon": "💍", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "q20",
+    "question": "Qual é o estado físico da água a 0°C?",
+    "choices": [
+      { "text": "Sólido (gelo)", "icon": "🧊", "isCorrect": true },
+      { "text": "Líquido", "icon": "💧", "isCorrect": false },
+      { "text": "Gasoso", "icon": "🌫️", "isCorrect": false },
+      { "text": "Plasma", "icon": "⚡", "isCorrect": false }
     ]
   }
 ]
