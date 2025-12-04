@@ -366,7 +366,7 @@ function QuizPlayer({ questions }) {
     }
 
     function handleTimeUp() {
-        if (isLocked) return;
+        clearInterval(timerRef.current);  // garante que não duplica timers
 
         const correct = shuffled.find(c => c.isCorrect);
         setSelected(correct);
@@ -380,6 +380,7 @@ function QuizPlayer({ questions }) {
             else setIndex(next);
         }, 2000);
     }
+
 
     function formatTime(t) {
         const m = Math.floor(t / 60);
