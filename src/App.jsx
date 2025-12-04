@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import quizData from "./data/quiz-data.json";
 import "./styles.css";
 
@@ -223,30 +223,50 @@ function QuizPlayer({ questions }) {
     const [selected, setSelected] = useState(null);
     const [isLocked, setIsLocked] = useState(false);
 
-    const confettiCanvasRef = React.useRef(null);
-    const confettiAnimRef = React.useRef(null);
+    const [timeLeft, setTimeLeft] = useState(120);
+    const timerRef = useRef(null);
 
-    useEffect(() => { setIndex(0); setScore(0); setFinished(false); }, [questions]);
+    const confettiCanvasRef = useRef(null);
+    const confettiAnimRef = useRef(null);
+
+    useEffect(() => {
+        setIndex(0);
+        setScore(0);
+        setFinished(false);
+    }, [questions]);
 
     useEffect(() => {
         const q = questions[index];
-        if (!q) { setShuffled([]); return; }
-        let rawChoices;
-        if (Array.isArray(q.choices) && q.choices.length > 0) {
-            rawChoices = q.choices.map(c => ({ text: String(c.text || ""), icon: c.icon || "", isCorrect: !!c.isCorrect }));
-        } else {
-            const arr = [];
-            if (q.correctAnswer !== undefined) arr.push({ text: String(q.correctAnswer), icon: "", isCorrect: true });
-            const wrongs = Array.isArray(q.wrongAnswers) ? q.wrongAnswers : [];
-            wrongs.slice(0,3).forEach(w => arr.push({ text: String(w), icon: "", isCorrect: false }));
-            rawChoices = arr;
-        }
+        if (!q) return;
+
+        const rawChoices = q.choices.map(c => ({
+            text: c.text,
+            icon: c.icon,
+            isCorrect: c.isCorrect
+        }));
+
         setShuffled(shuffleArray(rawChoices));
         setSelected(null);
         setIsLocked(false);
+        setTimeLeft(120);
+
+        if (timerRef.current) clearInterval(timerRef.current);
+
+        timerRef.current = setInterval(() => {
+            setTimeLeft(t => {
+                if (t <= 1) {
+                    clearInterval(timerRef.current);
+                    handleTimeUp();
+                    return 0;
+                }
+                return t - 1;
+            });
+        }, 1000);
+
+        return () => clearInterval(timerRef.current);
     }, [index, questions]);
 
-    function playTone({ freq = 440, duration = 0.12, type = "sine", volume = 0.08 } = {}) {
+    function playTone({ freq = 440, duration = 0.12, type = "sine", volume = 0.08 }) {
         try {
             const ctx = new (window.AudioContext || window.webkitAudioContext)();
             const o = ctx.createOscillator();
@@ -258,7 +278,10 @@ function QuizPlayer({ questions }) {
             g.connect(ctx.destination);
             o.start();
             g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + duration);
-            setTimeout(() => { o.stop(); ctx.close(); }, duration * 1000 + 50);
+            setTimeout(() => {
+                o.stop();
+                ctx.close();
+            }, duration * 1000 + 50);
         } catch (e) {}
     }
 
@@ -266,75 +289,73 @@ function QuizPlayer({ questions }) {
         const canvas = confettiCanvasRef.current;
         if (!canvas) return;
         const ctx = canvas.getContext("2d");
+
         let W = canvas.width = canvas.clientWidth;
         let H = canvas.height = canvas.clientHeight;
+
         const particles = [];
-        const count = 80;
-        for (let i = 0; i < count; i++) {
+        for (let i = 0; i < 80; i++) {
             particles.push({
-                x: W / 2 + (Math.random() - 0.5) * 100,
-                y: H / 2 + (Math.random() - 0.5) * 40,
+                x: W / 2,
+                y: H / 2,
                 vx: (Math.random() - 0.5) * 6,
                 vy: -Math.random() * 8 - 3,
                 size: 6 + Math.random() * 8,
                 ttl: 900 + Math.random() * 500,
                 age: 0,
-                color: `hsl(${Math.floor(Math.random()*360)},70%,55%)`,
+                color: `hsl(${Math.floor(Math.random() * 360)},70%,55%)`,
                 rotate: Math.random() * Math.PI * 2,
                 vr: (Math.random() - 0.5) * 0.3
             });
         }
 
-        const start = performance.now();
-        function frame(now) {
-            const dt = now - start;
-            ctx.clearRect(0,0,W,H);
+        function frame() {
+            ctx.clearRect(0, 0, W, H);
             for (let p of particles) {
-                p.age += 16.67;
-                p.vy += 0.32; // gravity
+                p.age += 16.6;
+                p.vy += 0.32;
                 p.x += p.vx;
                 p.y += p.vy;
                 p.rotate += p.vr;
+
                 const alpha = 1 - p.age / p.ttl;
                 if (alpha <= 0) continue;
+
                 ctx.save();
                 ctx.globalAlpha = alpha;
                 ctx.translate(p.x, p.y);
                 ctx.rotate(p.rotate);
                 ctx.fillStyle = p.color;
-                ctx.fillRect(-p.size/2, -p.size/2, p.size, p.size * 0.6);
+                ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
                 ctx.restore();
             }
 
-            let anyAlive = false;
-            for (let p of particles) if (p.age < p.ttl) { anyAlive = true; break; }
-            if (anyAlive) {
+            if (particles.some(p => p.age < p.ttl)) {
                 confettiAnimRef.current = requestAnimationFrame(frame);
             } else {
-                ctx.clearRect(0,0,W,H);
-                cancelAnimationFrame(confettiAnimRef.current);
-                confettiAnimRef.current = null;
+                ctx.clearRect(0, 0, W, H);
             }
         }
-        if (confettiAnimRef.current) cancelAnimationFrame(confettiAnimRef.current);
+
+        cancelAnimationFrame(confettiAnimRef.current);
         confettiAnimRef.current = requestAnimationFrame(frame);
     }
 
     function handleAnswer(choice) {
         if (isLocked) return;
-        const q = questions[index];
-        if (!q) return;
 
-        const correct = !!choice.isCorrect;
+        clearInterval(timerRef.current);
+
+        const correct = choice.isCorrect;
         setSelected(choice);
         setIsLocked(true);
 
         if (correct) {
             setScore(s => s + 1);
-            playTone({ freq: 880, duration: 0.12, type: "sine", volume: 0.06 });
+            playTone({ freq: 880, duration: 0.12 });
             fireConfetti();
         } else {
-            playTone({ freq: 240, duration: 0.18, type: "sawtooth", volume: 0.07 });
+            playTone({ freq: 240, duration: 0.18, type: "sawtooth" });
         }
 
         setTimeout(() => {
@@ -344,20 +365,30 @@ function QuizPlayer({ questions }) {
         }, 2000);
     }
 
-    useEffect(() => {
-        function handleResize() {
-            const c = confettiCanvasRef.current;
-            if (!c) return;
-            c.width = c.clientWidth;
-            c.height = c.clientHeight;
-        }
-        window.addEventListener("resize", handleResize);
-        handleResize();
-        return () => { window.removeEventListener("resize", handleResize); if (confettiAnimRef.current) cancelAnimationFrame(confettiAnimRef.current); };
-    }, []);
+    function handleTimeUp() {
+        if (isLocked) return;
 
-    if (!questions || questions.length === 0) {
-        return (<div className="empty">Nenhuma pergunta cadastrada. Entre no Admin para adicionar.</div>);
+        const correct = shuffled.find(c => c.isCorrect);
+        setSelected(correct);
+        setIsLocked(true);
+
+        playTone({ freq: 200, duration: 0.20, type: "square" });
+
+        setTimeout(() => {
+            const next = index + 1;
+            if (next >= questions.length) setFinished(true);
+            else setIndex(next);
+        }, 2000);
+    }
+
+    function formatTime(t) {
+        const m = Math.floor(t / 60);
+        const s = t % 60;
+        return `${m}:${s.toString().padStart(2, "0")}`;
+    }
+
+    if (!questions.length) {
+        return <div className="empty">Nenhuma pergunta cadastrada.</div>;
     }
 
     if (finished) {
@@ -365,9 +396,7 @@ function QuizPlayer({ questions }) {
             <div className="result">
                 <div className="title">Resultado</div>
                 <div className="score">Pontuação: {score} / {questions.length}</div>
-                <div className="actions" style={{ display:"flex", justifyContent:"center", gap:12 }}>
-                    <button onClick={() => { setIndex(0); setScore(0); setFinished(false); }}>Refazer</button>
-                </div>
+                <button onClick={() => { setIndex(0); setScore(0); setFinished(false); }}>Refazer</button>
             </div>
         );
     }
@@ -376,44 +405,56 @@ function QuizPlayer({ questions }) {
     const progressPercent = Math.round(((index + 1) / questions.length) * 100);
 
     return (
-        <div className="play" aria-live="polite" style={{ position: "relative" }}>
-            <canvas ref={confettiCanvasRef} className="confetti-canvas" aria-hidden style={{ position: "absolute", left: 0, top: 0, width: "100%", height: "100%", pointerEvents: "none", zIndex: 40 }} />
-            <div className="progress-wrap" aria-hidden>
+        <div className="play" style={{ position: "relative" }}>
+            <canvas ref={confettiCanvasRef} className="confetti-canvas" />
+
+            <div className="progress-wrap">
                 <div className="progress-bar" style={{ width: `${progressPercent}%` }} />
             </div>
 
             <div className="q-count">Pergunta {index + 1} de {questions.length}</div>
             <div className="q-text-large">{q.question}</div>
 
-            <div className="choices" role="list">
+            <div className="choices">
                 {shuffled.map((choice, i) => {
                     let className = "";
                     if (selected) {
-                        const isCorrect = choice.isCorrect;
-                        const isSelected = selected && selected.text === choice.text;
-                        if (isCorrect) className = "choice-correct";
-                        if (isSelected && !isCorrect) className = "choice-wrong";
+                        if (choice.isCorrect) className = "choice-correct";
+                        if (selected.text === choice.text && !choice.isCorrect) className = "choice-wrong";
                     }
 
                     return (
                         <button
                             key={i}
-                            role="listitem"
                             className={`choice-btn ${className}`}
                             onClick={() => handleAnswer(choice)}
                             disabled={isLocked}
-                            aria-pressed={selected === choice}
                         >
-                            <div className="choice-icon" aria-hidden>{choice.icon || ""}</div>
-                            <div style={{ flex:1, textAlign:"left" }}>{choice.text}</div>
+                            <div className="choice-icon">{choice.icon}</div>
+                            <div style={{ flex: 1 }}>{choice.text}</div>
                         </button>
                     );
                 })}
             </div>
 
+            <div
+                className={`timer-text ${timeLeft <= 10 ? "timer-warning" : ""}`}
+                style={{ marginTop: "32px" }}
+            >
+                Tempo restante: {formatTime(timeLeft)}
+            </div>
+
+            <div className="timer-bar-container" style={{ marginTop: "8px" }}>
+                <div
+                    className="timer-bar"
+                    style={{ width: `${(timeLeft / 120) * 100}%` }}
+                />
+            </div>
+
             <div className="status">Pontuação atual: {score}</div>
         </div>
     );
+
 }
 
 
