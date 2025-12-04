@@ -1,0 +1,202 @@
+[
+  {
+    "id": "n2q1",
+    "question": "Qual fenômeno explica por que vemos relâmpagos antes de ouvirmos o trovão?",
+    "choices": [
+      { "text": "A luz se move mais rápido que o som", "icon": "⚡", "isCorrect": true },
+      { "text": "O som se reflete nas nuvens", "icon": "🔊", "isCorrect": false },
+      { "text": "O relâmpago gera menos energia que o trovão", "icon": "💡", "isCorrect": false },
+      { "text": "A atmosfera distorce o som", "icon": "🌫️", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q2",
+    "question": "Qual foi um dos principais motivos para a Revolução Industrial iniciar na Inglaterra?",
+    "choices": [
+      { "text": "Abundância de carvão e ferro", "icon": "⛏️", "isCorrect": true },
+      { "text": "Proximidade com o Império Romano", "icon": "🏛️", "isCorrect": false },
+      { "text": "Clima favorável para agricultura", "icon": "🌾", "isCorrect": false },
+      { "text": "Baixa densidade populacional", "icon": "👥", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q3",
+    "question": "Por que a Lua apresenta sempre a mesma face voltada para a Terra?",
+    "choices": [
+      { "text": "Rotação sincronizada", "icon": "🌕", "isCorrect": true },
+      { "text": "Ela não gira sobre si mesma", "icon": "🚫", "isCorrect": false },
+      { "text": "Força gravitacional invertida", "icon": "🌀", "isCorrect": false },
+      { "text": "Efeito da sombra terrestre", "icon": "🌑", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q4",
+    "question": "Qual destes compostos é responsável pelo efeito estufa natural da Terra?",
+    "choices": [
+      { "text": "Dióxido de carbono (CO₂)", "icon": "🌫️", "isCorrect": true },
+      { "text": "Nitrogênio (N₂)", "icon": "🌬️", "isCorrect": false },
+      { "text": "Oxigênio (O₂)", "icon": "🍃", "isCorrect": false },
+      { "text": "Sódio (Na)", "icon": "🧂", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q5",
+    "question": "Qual é a função principal dos ribossomos nas células?",
+    "choices": [
+      { "text": "Síntese de proteínas", "icon": "🧬", "isCorrect": true },
+      { "text": "Produção de energia", "icon": "⚡", "isCorrect": false },
+      { "text": "Armazenamento de água", "icon": "💧", "isCorrect": false },
+      { "text": "Controle genético", "icon": "📘", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q6",
+    "question": "O Tratado de Tordesilhas, de 1494, dividia novas terras entre:",
+    "choices": [
+      { "text": "Portugal e Espanha", "icon": "🗺️", "isCorrect": true },
+      { "text": "França e Inglaterra", "icon": "⚔️", "isCorrect": false },
+      { "text": "Portugal e França", "icon": "🇫🇷", "isCorrect": false },
+      { "text": "Espanha e Itália", "icon": "🇮🇹", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q7",
+    "question": "No corpo humano, qual sistema é responsável pela troca de gases com o ambiente?",
+    "choices": [
+      { "text": "Sistema respiratório", "icon": "🫁", "isCorrect": true },
+      { "text": "Sistema digestório", "icon": "🍽️", "isCorrect": false },
+      { "text": "Sistema circulatório", "icon": "🩸", "isCorrect": false },
+      { "text": "Sistema excretor", "icon": "🚾", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q8",
+    "question": "Qual é a forma correta de reduzir o impacto ambiental do lixo eletrônico?",
+    "choices": [
+      { "text": "Descartar em pontos de coleta especializados", "icon": "♻️", "isCorrect": true },
+      { "text": "Enterrar no quintal", "icon": "🪦", "isCorrect": false },
+      { "text": "Misturar com lixo comum", "icon": "🗑️", "isCorrect": false },
+      { "text": "Queimar ao ar livre", "icon": "🔥", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q9",
+    "question": "Em uma metáfora, 'o tempo é um rio'. Qual é o significado mais provável?",
+    "choices": [
+      { "text": "O tempo flui continuamente", "icon": "🌊", "isCorrect": true },
+      { "text": "O tempo pode ser armazenado", "icon": "🪣", "isCorrect": false },
+      { "text": "O tempo se divide em margens", "icon": "🏞️", "isCorrect": false },
+      { "text": "O tempo se move em círculos", "icon": "⭕", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q10",
+    "question": "Qual é o objetivo principal do sistema reprodutor?",
+    "choices": [
+      { "text": "Garantir a continuidade da espécie", "icon": "🐣", "isCorrect": true },
+      { "text": "Produzir energia", "icon": "⚡", "isCorrect": false },
+      { "text": "Regular hormônios", "icon": "🧪", "isCorrect": false },
+      { "text": "Filtrar sangue", "icon": "🩸", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q11",
+    "question": "Qual processo permite que plantas liberem oxigênio para a atmosfera?",
+    "choices": [
+      { "text": "Fotossíntese", "icon": "🌿", "isCorrect": true },
+      { "text": "Fermentação", "icon": "🍞", "isCorrect": false },
+      { "text": "Transpiração", "icon": "💧", "isCorrect": false },
+      { "text": "Digestão", "icon": "🍽️", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q12",
+    "question": "O que define um eclipse solar?",
+    "choices": [
+      { "text": "A Lua se posiciona entre a Terra e o Sol", "icon": "🌘", "isCorrect": true },
+      { "text": "A Terra se posiciona entre o Sol e a Lua", "icon": "🌒", "isCorrect": false },
+      { "text": "O Sol se posiciona entre dois planetas", "icon": "🪐", "isCorrect": false },
+      { "text": "O Sol deixa de emitir luz temporariamente", "icon": "💡", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q13",
+    "question": "A soma dos ângulos internos de um quadrilátero é:",
+    "choices": [
+      { "text": "360°", "icon": "📐", "isCorrect": true },
+      { "text": "180°", "icon": "🔺", "isCorrect": false },
+      { "text": "270°", "icon": "🧭", "isCorrect": false },
+      { "text": "540°", "icon": "📊", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q14",
+    "question": "O movimento de rotação da Terra é responsável por qual fenômeno?",
+    "choices": [
+      { "text": "A sucessão de dias e noites", "icon": "🌍", "isCorrect": true },
+      { "text": "As estações do ano", "icon": "❄️", "isCorrect": false },
+      { "text": "As fases da Lua", "icon": "🌙", "isCorrect": false },
+      { "text": "A formação de eclipses", "icon": "🌑", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q15",
+    "question": "Qual destes é um exemplo de energia não renovável?",
+    "choices": [
+      { "text": "Petróleo", "icon": "🛢️", "isCorrect": true },
+      { "text": "Energia solar", "icon": "☀️", "isCorrect": false },
+      { "text": "Energia eólica", "icon": "🌪️", "isCorrect": false },
+      { "text": "Biomassa", "icon": "🌾", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q16",
+    "question": "Qual é a principal função dos glóbulos vermelhos?",
+    "choices": [
+      { "text": "Transportar oxigênio", "icon": "🩸", "isCorrect": true },
+      { "text": "Combater vírus", "icon": "🦠", "isCorrect": false },
+      { "text": "Produzir hormônios", "icon": "🧪", "isCorrect": false },
+      { "text": "Regular temperatura", "icon": "🌡️", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q17",
+    "question": "Qual é a principal razão para o aquecimento global atual?",
+    "choices": [
+      { "text": "Emissão de gases poluentes pelas atividades humanas", "icon": "🏭", "isCorrect": true },
+      { "text": "Aumento natural da atividade solar", "icon": "☀️", "isCorrect": false },
+      { "text": "Redução da camada de ozônio natural", "icon": "🕳️", "isCorrect": false },
+      { "text": "Movimentos tectônicos", "icon": "🌋", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q18",
+    "question": "Qual é o nome do maior bioma brasileiro em extensão territorial?",
+    "choices": [
+      { "text": "Amazônia", "icon": "🌳", "isCorrect": true },
+      { "text": "Cerrado", "icon": "🔥", "isCorrect": false },
+      { "text": "Caatinga", "icon": "🌵", "isCorrect": false },
+      { "text": "Pampa", "icon": "🐄", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q19",
+    "question": "Qual é o principal objetivo do sistema nervoso?",
+    "choices": [
+      { "text": "Coordenar as funções do corpo", "icon": "🧠", "isCorrect": true },
+      { "text": "Transportar nutrientes", "icon": "🍎", "isCorrect": false },
+      { "text": "Filtrar impurezas", "icon": "🚰", "isCorrect": false },
+      { "text": "Produzir energia", "icon": "⚡", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "n2q20",
+    "question": "O que caracteriza uma democracia?",
+    "choices": [
+      { "text": "Poder exercido pelo povo", "icon": "🗳️", "isCorrect": true },
+      { "text": "Poder absoluto de um líder", "icon": "👑", "isCorrect": false },
+      { "text": "Controle militar total", "icon": "🪖", "isCorrect": false },
+      { "text": "Herança familiar obrigatória", "icon": "🏰", "isCorrect": false }
+    ]
+  }
+]
